@@ -133,3 +133,33 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* @layer clerk {
+  .cl-providerIcon__github {
+    filter: invert(1);
+  }
+
+  .cl-userButtonPopoverActionButtonIcon__manageAccount {
+    filter: invert(1);
+  }
+
+  .cl-userButtonPopoverActionButtonIcon__signOut {
+    filter: invert(1);
+  }
+
+  .cl-internal-zpbffa {
+    filter: invert(1);
+  }
+
+  .cl-navbarButtonText__security {
+  filter: invert(1);
+  }
+
+  .cl-userButtonPopoverActionButtonIcon__security {
+    filter: invert(1);
+  }
+
+  .cl-userButtonPopoverActions {
+    filter: invert(1);
+  }
+} */
