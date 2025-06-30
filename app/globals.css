@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @layer utilities {
   .flex-center {
     @apply flex justify-center items-center;
@@ -54,6 +55,10 @@
   --color-dark-1: #1c1f2e;
   --color-dark-2: #161925;
   --color-blue-1: #0e78f9;
+  --color-sky-1: #c9ddff;
+  --color-orange-1: #ff742e;
+  --color-purple-1: #830ef9;
+  --color-yellow-1: #f9a90e;
 }
 
 :root {
@@ -123,6 +128,10 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+.bg-hero {
+    background-image: url('/images/hero-background.png');
 }
 
 @layer base {
