@@ -6,6 +6,9 @@ import { dark } from "@clerk/themes";
 import { Toaster } from "@/components/ui/sonner";
 
 import "@stream-io/video-react-sdk/dist/css/styles.css";
+import 'react-date-picker/dist/DatePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import "react-datepicker/dist/react-datepicker.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

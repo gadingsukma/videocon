@@ -25,7 +25,7 @@ const EndCallButton = () => {
         await call.endCall();
         router.push("/");
       }}
-      className="bg-red-600 hover:bg-red-800"
+      className="bg-red-600 hover:bg-red-800 cursor-pointer" 
     >
       End Call for Everyone
     </Button>
