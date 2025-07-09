@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* plugins [require("tw-animate-css")]; */
+/* plugins: [require('tailwindcss-animate')] */
+
 @layer utilities {
   .flex-center {
     @apply flex justify-center items-center;
@@ -53,8 +56,12 @@
   --radius-xl: calc(var(--radius) + 4px);
   --color-dark-1: #1c1f2e;
   --color-dark-2: #161925;
+  --color-dark-3: #252a41;
+  --color-dark-4: #1e2757;
   --color-blue-1: #0e78f9;
   --color-sky-1: #c9ddff;
+  --color-sky-2: #ecf0ff;
+  --color-sky-3: #f5fcff;
   --color-orange-1: #ff742e;
   --color-purple-1: #830ef9;
   --color-yellow-1: #f9a90e;
@@ -131,7 +138,7 @@
 }
 
 .bg-hero {
-    background-image: url('/images/hero-background.png');
+  background-image: url("/images/hero-background.png");
 }
 
 @layer base {
@@ -168,6 +175,32 @@
   }
 }
 
+@keyframes accordion-down {
+  from {
+    height: "0";
+  }
+  to {
+    height: "var(--radix-accordion-content-height)";
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: "var(--radix-accordion-content-height)";
+  }
+  to {
+    height: "0";
+  }
+}
+
+.accordion-down {
+  animation: 0.2s ease-out;
+}
+
+.accordion-up {
+  animation: 0.2s ease-out;
+}
+
 .str-video__call-stats {
   max-width: 500px;
   position: relative;
@@ -200,7 +233,6 @@
 /* .str-video__call-controls__button {
   height: 40px;
 } */
-
 
 /* @layer clerk {
   .cl-providerIcon__github {
