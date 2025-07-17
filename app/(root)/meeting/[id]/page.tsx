@@ -7,9 +7,10 @@ import { Alert } from "@/components/ui/alert";
 import { useGetCallById } from "@/hooks/useGetCallById";
 import { useUser } from "@clerk/nextjs";
 import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
-import { useState } from "react";
+import { use, useState } from "react";
 
-const Meeting = ({ params: { id } }: { params: { id: string } }) => {
+export default function Meeting({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
   const { user, isLoaded } = useUser();
   const [isSetupComplete, setIsSetupComplete] = useState(false);
   const { call, isCallLoading } = useGetCallById(id);
@@ -38,4 +39,3 @@ const Meeting = ({ params: { id } }: { params: { id: string } }) => {
   );
 };
 
-export default Meeting;
