@@ -67,7 +67,7 @@ const MeetingTypeList = () => {
     }
   };
 
-  const meetingLink = '${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}';
+  const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}`;
 
   return (
     <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -127,15 +127,15 @@ const MeetingTypeList = () => {
             >
               Select Date and Time
             </label>
-            <DatePicker 
-            selected={values.dateTime}
-            onChange={(date) => setValues({ ...values, dateTime: date! })}
-            showTimeSelect
-            timeFormat="HH:mm"
-            timeIntervals={15}
-            timeCaption="Time"
-            dateFormat="MMMM d, yyyy h:mm aa"
-            className="w-full rounded-2xl bg-dark-2 p-2 focus:outline-primary"
+            <DatePicker
+              selected={values.dateTime}
+              onChange={(date) => setValues({ ...values, dateTime: date! })}
+              showTimeSelect
+              timeFormat="HH:mm"
+              timeIntervals={15}
+              timeCaption="Time"
+              dateFormat="MMMM d, yyyy h:mm aa"
+              className="w-full rounded-2xl bg-dark-2 p-2 focus:outline-primary"
             />
           </div>
         </MeetingModal>
@@ -154,7 +154,6 @@ const MeetingTypeList = () => {
           buttonText="Copy Meeting Link"
         />
       )}
-      ;
       <MeetingModal
         isOpen={meetingState === "isInstantMeeting"}
         onClose={() => setMeetingState(undefined)}

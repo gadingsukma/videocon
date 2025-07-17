@@ -1,10 +1,6 @@
 import React, { ReactNode } from "react";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -58,7 +54,8 @@ const MeetingModal = ({
                 width={13}
                 height={13}
               />
-            )}&nbsp;
+            )}
+            &nbsp;
             {buttonText || "Schedule Meeting"}
           </Button>
         </div>
